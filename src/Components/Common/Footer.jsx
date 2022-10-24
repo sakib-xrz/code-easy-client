@@ -2,12 +2,20 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 text-neutral rounded">
+    <footer className="footer footer-center p-10 text-neutral border-t-4 rounded">
       <div className="grid grid-flow-col gap-4">
-        <a href="/" className="link link-hover">About us</a>
-        <a href="/" className="link link-hover">Contact</a>
-        <a href="/" className="link link-hover">Jobs</a>
-        <a href="/" className="link link-hover">Press kit</a>
+        <a href="/" className="link link-hover">
+          About us
+        </a>
+        <a href="/" className="link link-hover">
+          Contact
+        </a>
+        <a href="/" className="link link-hover">
+          Jobs
+        </a>
+        <a href="/" className="link link-hover">
+          Press kit
+        </a>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../Assets/logo.png"
+import { Link, NavLink } from "react-router-dom";
+import Logo from "../../Assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,14 +23,18 @@ const Header = () => {
           </div>
           <ul className="items-center hidden space-x-8 lg:flex">
             <li>
-              <a
-                href="/"
-                aria-label="Our product"
-                title="Our product"
-                className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+              <NavLink
+                to="/home"
+                aria-label="Our HomePage"
+                title="Our HomePage"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary font-medium tracking-wide transition-colors duration-200 hover:text-primary"
+                    : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                }
               >
-                Product
-              </a>
+                Home
+              </NavLink>
             </li>
             <li>
               <a
@@ -188,14 +192,18 @@ const Header = () => {
                   <nav>
                     <ul className="space-y-4">
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                        <NavLink
+                          to="/home"
+                          aria-label="Our Homepage"
+                          title="Our Homepage"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium tracking-wide text-primary transition-colors duration-200 hover:text-primary"
+                              : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                          }
                         >
-                          Product
-                        </a>
+                          Home
+                        </NavLink>
                       </li>
                       <li>
                         <a

@@ -4,16 +4,16 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-10 text-neutral border-t-4 rounded">
       <div className="grid grid-flow-col gap-4">
-        <a href="/" className="link link-hover">
+        <a href="/" className="link link-hover hover:text-primary">
           About us
         </a>
-        <a href="/" className="link link-hover">
+        <a href="/" className="link link-hover hover:text-primary">
           Contact
         </a>
-        <a href="/" className="link link-hover">
+        <a href="/" className="link link-hover hover:text-primary">
           Jobs
         </a>
-        <a href="/" className="link link-hover">
+        <a href="/" className="link link-hover hover:text-primary">
           Press kit
         </a>
       </div>
@@ -55,7 +55,10 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+        <p>
+          Copyright © 2022 - All right reserved by <br />
+          <span className="text-primary">Md Sakibul Islam</span>
+        </p>
       </div>
     </footer>
   );

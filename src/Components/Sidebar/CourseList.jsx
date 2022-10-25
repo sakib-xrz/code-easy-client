@@ -6,7 +6,11 @@ const CourseList = ({ course }) => {
   return (
     <div>
       <NavLink
-        className="flex items-center p-2 space-x-3 rounded-sm font-medium hover:text-secondary hover:bg-primary"
+        className={({ isActive }) =>
+          isActive
+            ? "flex items-center p-2 space-x-3 rounded-sm font-medium text-secondary bg-primary"
+            : "flex items-center p-2 space-x-3 rounded-sm font-medium hover:text-secondary hover:bg-primary"
+        }
         rel="noopener noreferrer"
         to={`/course/${id}`}
       >

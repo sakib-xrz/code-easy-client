@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <div className="sticky top-0 z-50 shadow-md bg-base-100">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="relative flex items-center justify-between">
-          <div>
+        <div className="relative grid grid-cols-12">
+          <div className="lg:col-span-3 col-span-7 flex justify-start items-center">
             <Link
               to="/"
               aria-label="Code Easy"
@@ -21,7 +21,7 @@ const Header = () => {
               </span>
             </Link>
           </div>
-          <ul className="items-center hidden space-x-8 lg:flex">
+          <ul className="col-span-6 justify-center items-center hidden space-x-8 lg:flex">
             <li>
               <NavLink
                 to="/home"
@@ -71,7 +71,7 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <ul className="items-center hidden space-x-8 lg:flex">
+          <ul className="col-span-3 justify-end items-center hidden space-x-8 lg:flex">
             <div className="flex items-center">
               <label className="swap swap-rotate">
                 <input type="checkbox" />
@@ -93,7 +93,7 @@ const Header = () => {
                 </svg>
               </label>
             </div>
-            <li>
+            <li className="lg:hidden xl:block">
               <Link
                 to="/login"
                 aria-label="Log in"
@@ -117,7 +117,7 @@ const Header = () => {
 
           {/* Mobile menu start here */}
 
-          <div className="lg:hidden">
+          <div className="lg:hidden col-span-5 flex justify-end items-center">
             <button
               aria-label="Open Menu"
               title="Open Menu"

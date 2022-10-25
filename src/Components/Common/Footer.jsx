@@ -8,9 +8,9 @@ const Footer = () => {
         <Link to="/home" className="link link-hover hover:text-primary">
           Home
         </Link>
-        <a href="/" className="link link-hover hover:text-primary">
-          Contact
-        </a>
+        <Link to="/courses" className="link link-hover hover:text-primary">
+          Courses
+        </Link>
         <a href="/" className="link link-hover hover:text-primary">
           Jobs
         </a>

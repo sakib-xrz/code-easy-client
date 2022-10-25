@@ -5,7 +5,7 @@ import Logo from "../../Assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="sticky top-0 shadow-md bg-base-100">
+    <div className="sticky top-0 z-50 shadow-md bg-base-100">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative flex items-center justify-between">
           <div>
@@ -37,14 +37,18 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <a
-                href="/"
-                aria-label="Our product"
-                title="Our product"
-                className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+              <NavLink
+                to="/courses"
+                aria-label="Our courses"
+                title="Our courses"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary font-medium tracking-wide transition-colors duration-200 hover:text-primary"
+                    : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                }
               >
-                Features
-              </a>
+                Courses
+              </NavLink>
             </li>
             <li>
               <a
@@ -206,14 +210,18 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Our product"
-                          title="Our product"
-                          className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                        <NavLink
+                          to="/courses"
+                          aria-label="Our courses"
+                          title="Our courses"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium tracking-wide text-primary transition-colors duration-200 hover:text-primary"
+                              : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                          }
                         >
-                          Features
-                        </a>
+                          Courses
+                        </NavLink>
                       </li>
                       <li>
                         <a

@@ -4,13 +4,17 @@ import Star from "../../../Assets/star.png"
 import Students from "../../../Assets/study-group.png"
 
 const Content = ({course}) => {
-    const { name, img, student, rating, description } = course;
+    const {id, name, img, student, rating, description } = course;
     return (
       <div>
         <div className=" text-neutral px-6">
-          <div className="container grid grid-cols-12 rounded-md mx-auto my-8 bg-zinc-100 shadow-md">
+          <div className="container grid grid-cols-12 rounded-md mx-auto my-8 bg-zinc-100 drop-shadow-xl">
             <div className="col-span-12 lg:col-span-4 flex justify-center items-center">
-              <img className="rounded-md lg:h-full lg:w-auto lg:object-content" src={img} alt="" />
+              <img
+                className="rounded-md lg:h-full lg:w-auto lg:object-content"
+                src={img}
+                alt=""
+              />
             </div>
             <div className="flex flex-col col-span-12 lg:col-span-8 px-6 py-3">
               <div className="flex"></div>
@@ -18,8 +22,8 @@ const Content = ({course}) => {
               <p className="flex-1 pt-2">{description}</p>
               <Link
                 rel="noopener noreferrer"
-                href="/"
-                className="inline-flex items-center pb-4 pt-4 lg:pt-0 space-x-2 text-sm text-primary"
+                to={`/course/${id}`}
+                className="w-28 inline-flex items-center mb-4 pt-4 lg:pt-0 space-x-2 text-sm text-primary font-medium"
               >
                 <span>See Details</span>
                 <svg

@@ -3,6 +3,7 @@ import Error from "../Components/Error/Error";
 import Login from "../Components/Login/Login";
 import Register from "../Components/Login/Register";
 import Blog from "../Components/Page/Blog/Blog";
+import Checkout from "../Components/Page/Checkout/Checkout";
 import Courses from "../Components/Page/Courses/Courses";
 import Faq from "../Components/Page/Faq/Faq";
 import Home from "../Components/Page/Home/Home";
@@ -17,10 +18,12 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
+        loader: () => fetch("http://localhost:5000/courses"),
         element: <Home></Home>,
       },
       {
         path: "/home",
+        loader: () => fetch("http://localhost:5000/courses"),
         element: <Home></Home>,
       },
       {
@@ -32,6 +35,12 @@ export const router = createBrowserRouter([
         element: <SingleCourse></SingleCourse>,
         loader: ({ params }) =>
           fetch(`http://localhost:5000/course/${params.id}`),
+      },
+      {
+        path: "/checkout/:id",
+        element: <Checkout></Checkout>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/checkout/${params.id}`),
       },
       {
         path: "/faq",

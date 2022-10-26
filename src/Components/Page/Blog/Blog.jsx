@@ -3,17 +3,17 @@ import React from 'react';
 const Blog = () => {
     return (
       <div className="py-12">
-        <div class="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
-          <div class="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="relative flex items-center justify-between p-5 rounded-sm">
-            <div class="pr-4">
-              <h6 class="mb-2 font-semibold leading-5 text-lg">
+        <div className="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
+          <div className="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="relative flex items-center justify-between p-5 rounded-sm">
+            <div className="pr-4">
+              <h6 className="mb-2 font-semibold leading-5 text-lg">
                 What is Cross-Origin Resource Sharing (CORS)?
               </h6>
-              <p class="text-sm">
+              <p className="text-sm">
                 Cross-Origin Resource Sharing (CORS) is an HTTP-header based
                 mechanism that allows a server to indicate any origins (domain,
                 scheme, or port) other than its own from which a browser should
@@ -27,18 +27,18 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div class="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
-          <div class="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="relative flex items-center justify-between p-5 rounded-sm">
-            <div class="pr-4">
-              <h6 class="mb-2 font-semibold leading-5 text-lg">
+        <div className="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
+          <div className="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="relative flex items-center justify-between p-5 rounded-sm">
+            <div className="pr-4">
+              <h6 className="mb-2 font-semibold leading-5 text-lg">
                 What we use Firebase? What other options to implement
                 authentication?
               </h6>
-              <p class="text-sm list-none">
+              <p className="text-sm list-none">
                 Google Firebase offers many features that pitch it as the go-to
                 backend development tool for web and mobile apps. It reduces
                 development workload and time. And it's a perfect prototyping
@@ -60,17 +60,17 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div class="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
-          <div class="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="relative flex items-center justify-between p-5 rounded-sm">
-            <div class="pr-4">
-              <h6 class="mb-2 font-semibold leading-5 text-lg">
+        <div className="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
+          <div className="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="relative flex items-center justify-between p-5 rounded-sm">
+            <div className="pr-4">
+              <h6 className="mb-2 font-semibold leading-5 text-lg">
                 How does the private route work?
               </h6>
-              <p class="text-sm">
+              <p className="text-sm">
                 The react private route component renders child components
                 (children) if the user is logged in. If not logged in the user
                 is redirected to the /login page with the return url passed in
@@ -79,17 +79,17 @@ const Blog = () => {
             </div>
           </div>
         </div>
-        <div class="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
-          <div class="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
-          <div class="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
-          <div class="relative flex items-center justify-between p-5 rounded-sm">
-            <div class="pr-4">
-              <h6 class="mb-2 font-semibold leading-5 text-lg">
+        <div className="relative mb-8 block w-10/12 p-px mx-auto overflow-hidden transition duration-300 transform rounded-md border shadow-md hover:scale-105 group hover:shadow-xl">
+          <div className="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 left-0 w-[2px] h-full duration-300 origin-bottom transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-neutral group-hover:scale-x-100"></div>
+          <div className="absolute bottom-0 right-0 w-[2px] h-full duration-300 origin-top transform scale-y-0 bg-neutral group-hover:scale-y-100"></div>
+          <div className="relative flex items-center justify-between p-5 rounded-sm">
+            <div className="pr-4">
+              <h6 className="mb-2 font-semibold leading-5 text-lg">
                 What is Node? How does Node work?
               </h6>
-              <p class="text-sm">
+              <p className="text-sm">
                 Node.js is an open-source backend javascript runtime
                 environment. Node allows developers to write JavaScript code
                 that runs directly in a computer process itself instead of in a

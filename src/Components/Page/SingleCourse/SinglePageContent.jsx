@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import {BiLockAlt} from "react-icons/bi"
 
 const SinglePageContent = ({ course }) => {
-  const { img, name, author, goals } = course;
+  const {id, img, name, author, goals } = course;
   return (
     <div>
       <section className="text-neutral">
@@ -47,7 +47,7 @@ const SinglePageContent = ({ course }) => {
                   {goals}
                 </p>
                 <Link
-                  to="/"
+                  to={`/checkout/${id}`}
                   className="bg-primary hover:bg-neutral text-secondary px-3 py-2 transition duration-200 rounded shadow-md inline-flex items-center"
                 >
                   <BiLockAlt className="mr-2"></BiLockAlt>

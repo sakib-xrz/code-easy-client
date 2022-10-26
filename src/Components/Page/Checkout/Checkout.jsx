@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import {MdDone} from "react-icons/md"
 
 const Checkout = () => {
   const { name, icon, author, price, invoice } = useLoaderData();
@@ -32,13 +33,29 @@ const Checkout = () => {
             </div>
             <p className="text-center text-sm font-medium">{author.name}</p>
             <div className="my-5 px-6 flex justify-center">
-              <Link
+              <label
+                htmlFor="my-modal-3"
                 to=""
-                className="w-full font-semibold bg-neutral hover:bg-primary text-secondary py-3 transition duration-200 rounded shadow-md inline-flex items-center justify-center"
+                className="cursor-pointer modal-button w-full font-semibold bg-neutral hover:bg-primary text-secondary py-3 transition duration-200 rounded shadow-md inline-flex items-center justify-center"
               >
                 <AiOutlineShoppingCart className="mr-2 font-semibold"></AiOutlineShoppingCart>
                 Proceed To Checkout
-              </Link>
+              </label>
+              <input type="checkbox" id="my-modal-3" className="modal-toggle" />
+              <div className="modal">
+                <div className="modal-box bg-zinc-100 flex justify-center items-center h-28 relative">
+                  <label
+                    htmlFor="my-modal-3"
+                    className="btn btn-sm btn-circle bg-neutral text-secondary absolute right-2 top-2"
+                  >
+                    ✕
+                  </label>
+                  <h3 className="text-2xl text-green-700 font-medium flex justify-center items-center">
+                    <MdDone className="font-black text-secondary mr-2 mt-1 bg-green-700 rounded-full"></MdDone>{" "}
+                    Purchase Successful
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
         </div>

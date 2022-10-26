@@ -33,7 +33,7 @@ const Register = () => {
               type="email"
               name="email"
               id="email"
-              placeholder="example@email.com"
+              placeholder="example@email.com  "
               className="w-full px-3 py-2 border rounded-md border-gray-700 bg-secondary text-neutral"
               required
             />

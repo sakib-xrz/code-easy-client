@@ -51,24 +51,32 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
-              <a
-                href="/"
-                aria-label="Product pricing"
-                title="Product pricing"
-                className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+              <NavLink
+                to="/faq"
+                aria-label="FAQ"
+                title="FAQ"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary font-medium tracking-wide transition-colors duration-200 hover:text-primary"
+                    : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                }
               >
-                Pricing
-              </a>
+                FAQ
+              </NavLink>
             </li>
             <li>
-              <a
-                href="/"
-                aria-label="About us"
-                title="About us"
-                className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+              <NavLink
+                to="/blog"
+                aria-label="Blog"
+                title="Blog"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-primary font-medium tracking-wide transition-colors duration-200 hover:text-primary"
+                    : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                }
               >
-                About us
-              </a>
+                Blog
+              </NavLink>
             </li>
           </ul>
           <ul className="col-span-3 justify-end items-center hidden space-x-8 lg:flex">
@@ -106,7 +114,7 @@ const Header = () => {
             <li>
               <Link
                 to="/register"
-                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-secondary transition duration-200 rounded shadow-md bg-primary"
+                className="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-secondary transition duration-200 rounded shadow-md bg-primary hover:bg-neutral"
                 aria-label="Register"
                 title="Register"
               >
@@ -141,7 +149,7 @@ const Header = () => {
             </button>
             {isMenuOpen && (
               <div className="absolute top-0 left-0 w-full">
-                <div className="p-5 bg-white border rounded shadow-sm">
+                <div className="p-5 bg-zinc-100 border rounded shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center">
                       <Link
@@ -224,24 +232,32 @@ const Header = () => {
                         </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="Product pricing"
-                          title="Product pricing"
-                          className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                        <NavLink
+                          to="/faq"
+                          aria-label="FAQ"
+                          title="FAQ"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium tracking-wide text-primary transition-colors duration-200 hover:text-primary"
+                              : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                          }
                         >
-                          Pricing
-                        </a>
+                          FAQ
+                        </NavLink>
                       </li>
                       <li>
-                        <a
-                          href="/"
-                          aria-label="About us"
-                          title="About us"
-                          className="font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                        <NavLink
+                          to="/blog"
+                          aria-label="Blog"
+                          title="Blog"
+                          className={({ isActive }) =>
+                            isActive
+                              ? "font-medium tracking-wide text-primary transition-colors duration-200 hover:text-primary"
+                              : "font-medium tracking-wide text-neutral transition-colors duration-200 hover:text-primary"
+                          }
                         >
-                          About us
-                        </a>
+                          Blog
+                        </NavLink>
                       </li>
                       <li>
                         <Link
@@ -256,7 +272,7 @@ const Header = () => {
                       <li>
                         <Link
                           href="/register"
-                          className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-secondary transition duration-200 rounded shadow-md bg-primary"
+                          className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-secondary transition duration-200 rounded shadow-md bg-primary hover:bg-neutral"
                           aria-label="Register"
                           title="Register"
                         >

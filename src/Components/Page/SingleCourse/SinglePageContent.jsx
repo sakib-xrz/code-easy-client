@@ -35,7 +35,7 @@ const SinglePageContent = ({ course }) => {
                   <small>
                     <p className="text-sm">{author.title}</p>
                   </small>
-                  <div className="w-12 h-1 bg-primary rounded mt-2 mb-4"></div>
+                  <div className="w-12 h-1 bg-primary hover:bg-neutral rounded mt-2 mb-4"></div>
                   <p className="text-sm">{author.about}</p>
                 </div>
               </div>
@@ -48,7 +48,7 @@ const SinglePageContent = ({ course }) => {
                 </p>
                 <Link
                   to="/"
-                  className="bg-primary text-secondary px-3 py-2 transition duration-200 rounded shadow-md inline-flex items-center"
+                  className="bg-primary hover:bg-neutral text-secondary px-3 py-2 transition duration-200 rounded shadow-md inline-flex items-center"
                 >
                   <BiLockAlt className="mr-2"></BiLockAlt>
                   Enroll Now

@@ -8,8 +8,8 @@ const Process = () => {
       <div>
         <section className="m-4 pt-2 lg:-mt-4 md:m-8 text-neutral">
           <div className="container mx-auto p-4 my-6 space-y-2 text-center">
-            <h2 className="md:text-4xl text-2xl font-semibold max-w-xl mx-auto  md:mb-8">
-              Learn everything you need to know to become a web developer
+            <h2 className="max-w-lg font-sans text-center text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+              Everything you need to become a Web Developer
             </h2>
           </div>
           <div className="container mx-auto grid gap-4 justify-center sm:grid-cols-2 lg:grid-cols-3">

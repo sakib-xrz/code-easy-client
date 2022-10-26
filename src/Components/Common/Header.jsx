@@ -5,7 +5,7 @@ import Logo from "../../Assets/logo.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="sticky top-0 z-50 shadow-md bg-base-100">
+    <div className="sticky top-0 z-50 shadow-md bg-zinc-100">
       <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative grid grid-cols-12">
           <div className="lg:col-span-3 col-span-7 flex justify-start items-center">

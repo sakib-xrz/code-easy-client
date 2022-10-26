@@ -15,7 +15,7 @@ const SinglePageContent = ({ course }) => {
             <div className="rounded-lg">
               <img
                 alt="content"
-                className="mx-auto object-cover object-center rounded-lg md:h-64 md:w-auto shadow-lg"
+                className="mx-auto object-cover object-center rounded-lg md:h-72 md:w-auto shadow-lg"
                 src={img}
               />
             </div>

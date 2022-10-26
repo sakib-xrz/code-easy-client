@@ -7,7 +7,7 @@ const Content = ({course}) => {
     const {id, name, img, student, rating, description } = course;
     return (
       <div>
-        <div className=" text-neutral px-6">
+        <div className="text-neutral px-6">
           <div className="container grid grid-cols-12 rounded-md mx-auto my-8 bg-zinc-100 drop-shadow-xl">
             <div className="col-span-12 lg:col-span-4 flex justify-center items-center">
               <img

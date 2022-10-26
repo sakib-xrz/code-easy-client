@@ -5,7 +5,7 @@ import Banner from "../../../Assets/banner.png";
 const Hero = () => {
   return (
     <div>
-      <section className="text-gray-800 bg-base-100 lg:-mt-16">
+      <section className="text-gray-800 lg:-mt-16">
         <div className="container flex flex-col justify-center items-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1 className="md:text-5xl font-bold leading-tight text-3xl">

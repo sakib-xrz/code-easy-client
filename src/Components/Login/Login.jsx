@@ -1,13 +1,74 @@
-import React from "react";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Login = () => {
+  const { signIn, logInWithGoogle, logInWithGithub } = useContext(AuthContext);
+  const [error, setError] = useState("");
+
+  const googleProvider = new GoogleAuthProvider();
+  const githubProvider = new GithubAuthProvider();
+
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        setError("");
+        refreshPage();
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    logInWithGoogle(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+        refreshPage();
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
+
+  const handleGithubSignIn = () => {
+    logInWithGithub(githubProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+        refreshPage();
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
+
+  const refreshPage = () => {
+    window.location.reload();
+  };
+
   return (
     <div className="w-11/12 md:w-7/12 lg:w-5/12 mx-auto my-8">
       <div>
         <div className="p-8 space-y-3 rounded-xl bg-secondary text-neutral">
           <h1 className="text-2xl font-bold text-center">Login</h1>
           <form
+            onSubmit={handleSignIn}
             noValidate=""
             action=""
             className="space-y-6 ng-untouched ng-pristine ng-valid"
@@ -44,7 +105,7 @@ const Login = () => {
               </div>
             </div>
             <small>
-              <p className="text-error -mt-2">Error here!!!</p>
+              <p className="text-error -mt-2">{error.split("Firebase:")}</p>
             </small>
             <button
               type="submit"
@@ -60,6 +121,7 @@ const Login = () => {
           </div>
           <div className="flex flex-col justify-center lg:flex-row lg:justify-between">
             <button
+              onClick={handleGoogleSignIn}
               aria-label="Log in with Google"
               className="w-12/12 lg:w-6/12 p-3 rounded-md flex items-center justify-center font-semibold text-lg lg:mr-2 bg-[#4285F4] text-secondary mb-3 lg:mb-0"
             >
@@ -73,6 +135,7 @@ const Login = () => {
               <h3 className="ml-3">Log in with Google</h3>
             </button>
             <button
+              onClick={handleGithubSignIn}
               aria-label="Log in with GitHub"
               className="w-12/12 lg:w-6/12 p-3 rounded-md flex items-center justify-center font-semibold text-lg lg:ml-2 bg-[#161B22] text-secondary"
             >

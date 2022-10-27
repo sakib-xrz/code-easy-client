@@ -1,20 +1,67 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthProvider";
 
 const Register = () => {
+  const { signUp, profileUpdate } = useContext(AuthContext);
+  const [error, setError] = useState("");
+  const navigate = useNavigate()
+
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const photo = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const confirm = form.confirm.value;
+
+    if (password !== confirm) {
+      setError("Password doesn't match");
+      return;
+    }
+    setError("");
+
+    signUp(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        form.reset();
+        handleUserProfile(name, photo);
+        navigate("/login")
+        setError("");
+      })
+      .catch((error) => {
+        console.error(error);
+        setError(error.message);
+      });
+  };
+
+  const handleUserProfile = (name, photo) => {
+    const profile = {
+      displayName: name,
+      photoURL: photo,
+    };
+
+    profileUpdate(profile)
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className="w-11/12 md:w-7/12 lg:w-5/12 mx-auto my-8 p-8 rounded-md sm:p-10 bg-secondary text-neutral">
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-bold">Register</h1>
       </div>
       <form
+        onSubmit={handleSignUp}
         noValidate=""
         action=""
         className="space-y-12 ng-untouched ng-pristine ng-valid"
       >
         <div className="space-y-4">
           <div>
-            <label htmlFor="name" className="block mb-2 text-sm">
+            <label htmlFor="name" className="block mb-2 text-sm" required>
               Name
             </label>
             <input
@@ -82,7 +129,7 @@ const Register = () => {
           </div>
         </div>
         <small>
-          <p className="text-error mt-2">Error Here!!!</p>
+          <p className="text-error mt-2">{error.split("Firebase:")}</p>
         </small>
         <div className="space-y-2 mt-0">
           <div className="flex items-center -mt-8">

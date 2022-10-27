@@ -19,12 +19,14 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://code-easy-server-seven.vercel.app/courses"),
         element: <Home></Home>,
       },
       {
         path: "/home",
-        loader: () => fetch("http://localhost:5000/courses"),
+        loader: () =>
+          fetch("https://code-easy-server-seven.vercel.app/courses"),
         element: <Home></Home>,
       },
       {
@@ -35,7 +37,9 @@ export const router = createBrowserRouter([
         path: "/course/:id",
         element: <SingleCourse></SingleCourse>,
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/course/${params.id}`),
+          fetch(
+            `https://code-easy-server-seven.vercel.app/course/${params.id}`
+          ),
       },
       {
         path: "/checkout/:id",
@@ -45,7 +49,9 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/checkout/${params.id}`),
+          fetch(
+            `https://code-easy-server-seven.vercel.app/checkout/${params.id}`
+          ),
       },
       {
         path: "/faq",

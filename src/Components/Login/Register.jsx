@@ -5,7 +5,12 @@ import { AuthContext } from "../../Context/AuthProvider";
 const Register = () => {
   const { signUp, profileUpdate } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [accepted, setAccepted] = useState(false);
   const navigate = useNavigate();
+
+  const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
+  };
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -28,7 +33,7 @@ const Register = () => {
         console.log(user);
         form.reset();
         handleUserProfile(name, photo);
-        navigate("/");
+        navigate("/login");
         setError("");
       })
       .catch((error) => {
@@ -135,6 +140,7 @@ const Register = () => {
           <div className="flex items-center -mt-8">
             <input
               type="checkbox"
+              onClick={handleAccepted}
               className="checkbox checkbox-neutral rounded cursor-pointer h-4 w-4 mr-2"
             />
             <span className="label-text pb-px">
@@ -147,8 +153,9 @@ const Register = () => {
 
           <div className="-mt-8">
             <button
+              disabled={!accepted}
               type="submit"
-              className="w-full px-8 py-3 font-semibold rounded-md bg-neutral text-secondary"
+              className="w-full px-8 py-3 font-semibold rounded-md bg-neutral text-secondary disabled:opacity-70 disabled:cursor-not-allowed"
             >
               Register
             </button>

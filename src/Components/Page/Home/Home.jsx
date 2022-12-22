@@ -9,10 +9,10 @@ const Home = () => {
   const courseData = useLoaderData();
   return (
     <div>
-      <Hero></Hero>
-      <Process></Process>
-      <Team courseData={courseData}></Team>
-      <Faq></Faq>
+      <Hero />
+      <Process />
+      <Team courseData={courseData} />
+      <Faq />
     </div>
   );
 };

@@ -155,7 +155,7 @@ const Login = () => {
             <Link
               rel="noopener noreferrer"
               to="/register"
-              className="underline"
+              className="underline hover:text-primary"
             >
               Register Now
             </Link>
